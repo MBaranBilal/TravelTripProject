@@ -1,0 +1,28 @@
+﻿@model TravelTripProject.Models.Siniflar.Yorumlar
+
+@*<div class="content-form">
+        <h3 style="color:firebrick"><b>Bir Yorum Yapın</b></h3>
+        <form method="post">
+            <input type="text" placeholder="Blog ID" name="Blogid" required />
+            <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required />
+            <input type="text" placeholder="Mail Adresi" name="Mail" required />
+            <textarea placeholder="Yorum" name="Yorum"></textarea>
+            <input type="submit" value="Gönder"/>
+        </form>
+    </div>*@
+<h3 style="color:firebrick"><b>Bir Yorum Yapın</b></h3>
+<br />
+<form class="form-group" method="post">
+    @Html.TextBoxFor(x => x.Blogid, new { @class = "form-control", @placeholder = "Blogid" })
+    <br />
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", @placeholder = "Kullanıcı Adı" })
+    <br />
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Mail" })
+    <br />
+    @Html.TextAreaFor(x => x.Yorum, 10, 1, new { @class = "form-control" ,@placeholder="Yorum"})
+    <br />
+    <button class="btn btn-warning"><i class="bi bi-check-circle-fill"></i> Gönder</button>
+</form>
+
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">

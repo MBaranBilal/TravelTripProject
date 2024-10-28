@@ -1,0 +1,35 @@
+﻿@model TravelTripProject.Models.Siniflar.Yorumlar
+
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<br />
+<h3>Yorum Güncelleme işlemi</h3>
+<br />
+<form class="form-group" method="post" style="color:firebrick; font-size:20px;">
+    @Html.LabelFor(x => x.Blogid)
+    @Html.TextBoxFor(x => x.Blogid, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KullaniciAdi)
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Yorum)
+    @Html.TextBoxFor(x => x.Yorum, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning"><i class="bi bi-pencil"></i> Yorumu Güncelle</button>
+    <br />
+</form>
+
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+

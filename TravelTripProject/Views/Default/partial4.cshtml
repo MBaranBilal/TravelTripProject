@@ -1,0 +1,19 @@
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Blog>
+
+<div class="padding1">
+    <h4>En Beğendiğim Yerler</h4>
+    <div class="box-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img src="@item.BlogImage" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>@item.Aciklama.Substring(0,70) ...</p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+    @Html.Action("partial5","Default")
+</div>
